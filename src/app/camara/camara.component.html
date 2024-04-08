@@ -1,0 +1,32 @@
+<!-- <div>
+  <button (click)="startCamera()">Activar Cámara</button>
+  <button (click)="stopCamera()">Detener Cámara</button>
+  <button (click)="capturePhoto()">Capturar Foto</button>
+</div> -->
+
+<!-- <video *ngIf="mediaStream" autoplay></video> -->
+
+<!-- Mostrar la imagen capturada -->
+<!-- <img *ngIf="capturedPhotoBase64" [src]="capturedPhotoBase64" alt="Captured Photo"> -->
+
+
+<!-- <button (click)="openCamera()">Escanear Foto</button>
+<input #fileInput type="file" accept="image/*" capture="camera" style="display: none" (change)="handleCameraInput($event)">
+<div *ngFor="let imageUrl of selectedImagesUrlBase64; let i = index">
+  <img [src]="imageUrl" alt="Captured Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+  <p class="base64-url">URL en base64: {{ selectedImagesBase64[i] }}</p>
+</div> -->
+
+
+<!-- <button (click)="removeLastImage()">Eliminar última imagen</button> -->
+
+<button (click)="openCamera()">Escanear Foto</button>
+<input #fileInput type="file" accept="image/*" capture="camera" style="display: none" (change)="handleCameraInput($event)">
+<div *ngFor="let imageUrl of selectedImagesUrlBase64; let i = index">
+  <img [src]="imageUrl" alt="Captured Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+  <a href="#" class="base64-link" (click)="showBase64(selectedImagesBase64[i]); copyToClipboard(); $event.preventDefault()">Copiar imagen base64</a>
+
+
+</div>
+
+
